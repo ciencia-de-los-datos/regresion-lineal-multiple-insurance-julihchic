@@ -164,6 +164,7 @@ def pregunta_04():
         X_test
         y_test_pred,
     ).round(2)
+    
 
     # Retorne el error cuadrático medio para entrenamiento y prueba
     return mse_train, mse_test
