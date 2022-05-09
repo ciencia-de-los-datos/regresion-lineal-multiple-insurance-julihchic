@@ -14,39 +14,28 @@ import numpy as np
 
 
 def pregunta_01():
-    df = pd.read_csv('insurance.csv', sep=',', header=0)
-    y = df.charges
-    X = df.copy()
-    X.pop('charges')
-    return X, y
-
-
-
-
-
-
     """
     Carga de datos.
     -------------------------------------------------------------------------------------
     """
     # Lea el archivo `insurance.csv` y asignelo al DataFrame `df`
-    #df = pd.read_csv('insurance.csv', sep=',', header=0)
+    df = pd.read_csv('insurance.csv', sep=',', header=0)
     # Asigne la columna `charges` a la variable `y`.
-    #y = df.charges
+    y = df.charges
 
     # Asigne una copia del dataframe `df` a la variable `X`.
-    #X = df.copy()
+    X = df.copy()
 
     # Remueva la columna `charges` del DataFrame `X`.
-    #X.pop('charges')
+    X.pop('charges')
 
     # Retorne `X` y `y`
-    #return X, y
+    return X, y
 
 
 def pregunta_02():
 
-    
+
     """
     Preparación de los conjuntos de datos.
     -------------------------------------------------------------------------------------
