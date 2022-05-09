@@ -10,9 +10,21 @@ selección de las n variables más relevantes usando una prueba f.
 # pylint: disable=unsubscriptable-object
 
 import pandas as pd
+import numpy as np
 
 
 def pregunta_01():
+    df = pd.read_csv('insurance.csv', sep=',', header=0)
+    y = df.charges
+    X = df.copy()
+    X.pop('charges')
+    return X, y
+
+
+
+
+
+
     """
     Carga de datos.
     -------------------------------------------------------------------------------------
@@ -39,7 +51,7 @@ def pregunta_02():
     """
 
     # Importe train_test_split
-    import numpy as np
+    
     from sklearn.model_selection import train_test_split
 
     # Cargue los datos y asigne los resultados a `X` y `y`.
