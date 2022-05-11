@@ -31,6 +31,7 @@ def pregunta_01():
 
     # Retorne `X` y `y`
     return X, y
+pregunta_01()
 
 
 def pregunta_02():
@@ -159,12 +160,12 @@ def pregunta_04():
     # valores a dos decimales.
 
     mse_train = mean_squared_error(
-        X_train,
+        y_train,
         y_train_pred,
     ).round(2)
 
     mse_test = mean_squared_error(
-        X_test
+        y_test,
         y_test_pred,
     ).round(2)
 
